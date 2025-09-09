@@ -25,7 +25,7 @@ const routes = [
         ]
     },
     { path: '/order/:id', component: Order },
-    { path: '/:pathMatch(.*)*', name: "Notfound", component: () => import('../pages/notfound.vue') },
+    { path: '/:pathMatch(.*)*', component: () => import('../pages/notfound.vue') },
 ]
 
 const router = createRouter({
