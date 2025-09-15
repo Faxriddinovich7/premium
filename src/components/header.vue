@@ -12,7 +12,7 @@
         <router-link to="/contact" class="hover:text-blue-500">{{ $t("contact") }}</router-link>
         <router-link to="/profile" class="hover:text-blue-500">{{ $t("profile") }}</router-link>
       </nav>
-
+      <button @click="loginStore.logout()" class="bg-red-500 text-white text-sm py-2 px-4 rounded-md">log out</button>
       <select v-model="locale.value" @change="saveLang" class="text-black  border rounded px-2 py-1 text-sm">
         <option value="uz">Uzbek</option>
         <option value="ru">Русский</option>
@@ -24,8 +24,10 @@
 
 <script setup>
 import { useI18n } from 'vue-i18n'
+import {loginUseStore} from "../store/loginUse.js";
 
 const { t, locale } = useI18n()
+const loginStore = loginUseStore()
 
 const savedLang = localStorage.getItem("lang")
 if (savedLang) {
@@ -35,4 +37,5 @@ if (savedLang) {
 const saveLang = () => {
   localStorage.setItem("lang", locale.value)
 }
+
 </script>
