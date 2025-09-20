@@ -27,6 +27,6 @@
 </template>
 
 <script setup>
-import Button from '../components/Button.vue'
+import Button from '../components/button.vue'
 import avatar from '../assets/tony.jpg'
 </script>
