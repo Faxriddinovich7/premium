@@ -61,7 +61,7 @@
 <script setup>
 import Header from '../components/header.vue'
 import Footer from '../components/footer.vue'
-import Button from '../components/Button.vue'
+import Button from '../components/button.vue'
 
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
